@@ -1,11 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  ActivityIndicator,
-  Alert,
-  FlatList,
-  ListRenderItem,
-} from 'react-native';
+import { ActivityIndicator, Alert, FlatList } from 'react-native';
 import { useTheme } from 'styled-components/native';
 import { ButtonStyled, Container, Typography } from '../../components';
 import { useProducts } from '../../hooks';

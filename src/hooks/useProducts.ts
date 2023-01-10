@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { productService } from '../services';
 import { FilterEnum, TProduct } from '../types';
 
@@ -44,7 +43,7 @@ export const useProducts = (): TReturn => {
 
       setProducts(productList);
       setLoading(false);
-    } catch (error) {
+    } catch (e) {
       setError('errors.getProducts');
       setLoading(false);
     }

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from 'styled-components/native';
-import { Body, ButtonStyled, Container, Typography } from '../../components';
+import { Body, ButtonStyled, Typography } from '../../components';
 import { MovementDetailProps } from '../../types';
 import { date, formatNumber } from '../../utils';
 import { Header, ProductImage } from './Styles';
