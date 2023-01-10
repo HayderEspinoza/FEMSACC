@@ -17,4 +17,5 @@ const Container = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  margin-bottom: 20px;
 `;
