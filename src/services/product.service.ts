@@ -1,7 +1,7 @@
 import { Http } from '../libs/http';
 import { TProduct } from '../types';
 
-class ProductService {
+export class ProductService {
   private http;
 
   constructor() {

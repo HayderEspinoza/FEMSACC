@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from 'styled-components/native';
 import { Body, ButtonStyled, Typography } from '../../components';
 import { MovementDetailProps } from '../../types';
-import { date, formatNumber } from '../../utils';
+import { formatDate, formatNumber } from '../../utils';
 import { Header, ProductImage } from './Styles';
 
 export const MovementDetail: FC<MovementDetailProps> = (props) => {
@@ -34,7 +34,7 @@ export const MovementDetail: FC<MovementDetailProps> = (props) => {
 
         <Typography marginTop={19} variant="heavy">
           {t('movementDetail.purchasedOn', {
-            date: date.format(params.createdAt, 'DD [de] MMMM, YYYY'),
+            date: formatDate(params.createdAt, 'DD [de] MMMM, YYYY'),
           })}
         </Typography>
 

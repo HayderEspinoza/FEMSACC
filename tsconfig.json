@@ -6,8 +6,11 @@
 
     /* Completeness */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
-    "types": ["styled-components-react-native"],
+    "types": ["styled-components-react-native", "jest"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "exclude": [
+      "node_modules", "babel.config.js", "metro.config.js", "jest.config.ts"
+    ]
   }
 }

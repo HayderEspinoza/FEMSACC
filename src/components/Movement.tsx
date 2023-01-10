@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native';
 import styled, { useTheme } from 'styled-components/native';
 import { Typography } from '.';
 import { TProduct } from '../types';
-import { date } from '../utils';
+import { formatDate } from '../utils';
 
 type Props = {
   data: TProduct;
@@ -24,7 +24,7 @@ export const Movement: FC<Props> = (props) => {
           {data.product}
         </Typography>
         <Typography size={12}>
-          {date.format(data.createdAt, 'DD [de] MMMM, YYYY')}
+          {formatDate(data.createdAt, 'DD [de] MMMM, YYYY')}
         </Typography>
       </DescriptionContainer>
 

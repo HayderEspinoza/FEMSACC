@@ -21,18 +21,18 @@ export const useProducts = (): TReturn => {
       setLoading(true);
       setProducts([]);
 
-      let productList: Array<TProduct> = [];
-      productList = await productService.getProducts();
+      const response = await productService.getProducts();
+      let productList = response;
 
       if (FilterEnum.earned === status) {
-        productList = productList.filter((item) => !item.is_redemption);
+        productList = response.filter((item) => !item.is_redemption);
       } else if (FilterEnum.redeemed === status) {
-        productList = productList.filter((item) => item.is_redemption);
+        productList = response.filter((item) => item.is_redemption);
       }
 
-      if (productList.length) {
+      if (response.length) {
         let acum = 0;
-        for (const product of productList) {
+        for (const product of response) {
           if (product.is_redemption) {
             acum -= product.points;
           }
